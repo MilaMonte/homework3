@@ -1,0 +1,224 @@
+/* CSS Document */
+/* reset browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+table {
+	 border-collapse: collapse; 
+	 border-spacing: 0; 
+}
+
+td, th, caption {
+	font-weight: normal;
+	text-align: left; 
+}
+
+img, fieldset {
+	border: 0; 
+}
+
+ol, ul {
+	padding-left:0; 
+	list-style: none; 
+}
+/* end reset browser styles */
+
+ul{
+	 font-size:0; /* убираем горизонтальные отступы */
+	 line-height:0; /* ...и вертикальные в некоторых браузерах */
+	 letter-spacing:-1px; /* переубеждаем webkit'ы */
+}
+
+body {
+	background-color: #f9f9f9;
+	background-size: 100%;
+}
+
+#container {
+	box-sizing: 100%;
+	width:80%;
+	background-color:#FFF;
+	margin: 0 auto;
+	box-shadow: -2px -1px 2px rgba(0,0,0,0.15), 
+                 2px -1px 2px rgba(0,0,0,0.15);
+	padding: 0 30px 0 30px;	
+}
+
+.logo{
+	margin-top: 40px;
+}
+@font-face{
+	font-family: OpenSansReg;
+	src: url(font/OpenSans-Regular.ttf);
+}
+
+/****************************Main Menu*******************************/
+
+.main_nav{
+    position: relative;
+    background-color: #605f5f;
+    background-image: -moz-linear-gradient(#605f5f, #343333); 
+    background-image: -webkit-gradient(linear, top, bottom, from(#605f5f), to(#343333));    
+    background-image: -webkit-linear-gradient(#605f5f, #343333);    
+    background-image: -o-linear-gradient(#605f5f, #343333);
+    background-image: -ms-linear-gradient(#605f5f, #343333);
+    background-image: linear-gradient(#605f5f, #343333);    
+	
+    height: 40px;
+    margin: 40px auto;
+    padding: 0;
+    z-index: 10 /* для отображения подпунктов поверх остальных блоков */
+}
+.main_nav ul li {
+    padding:0;
+    margin:0;
+}
+.main_nav ul {    
+    clear: left;
+    position: relative;
+    height: 40px;
+    font: 15px OpenSansReg;
+	color: #FFF;
+	text-shadow: 1px 1px #000; 
+}
+
+.main_nav ul li:last-child {
+    border:none;
+    box-shadow:none
+}    
+.main_nav ul li a {
+    display:block;
+    color: #FFF;
+    text-decoration: none;
+    padding:10px 40px;
+}
+.main_nav ul li a:hover {
+    background-color: #2e2e2e;
+    background-image: -moz-linear-gradient(#4a4a4a,  #2e2e2e);    
+    background-image: -webkit-gradient(linear, top, bottom, from(#4a4a4a), to(#2e2e2e));
+    background-image: -webkit-linear-gradient(#4a4a4a, #2e2e2e);
+    background-image: -o-linear-gradient(#4a4a4a, #2e2e2e);
+    background-image: -ms-linear-gradient(#4a4a4a, #2e2e2e);
+    background-image: linear-gradient(#4a4a4a, #2e2e2e);
+    color: #fafafa;
+	border-right:1px #666 solid;
+	border-left:1px #666 solid;
+}
+.main_nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+	
+.main_nav ul li {
+	line-height: normal;
+	letter-spacing:normal;
+	display: -moz-inline-stack;
+	display: inline-block;
+	//display: inline;
+	zoom: 1;
+}
+
+/***********************Side Bar*******************************/
+
+.side_bar {
+	position: relative;
+    float: left;
+    width: 220px;
+	border: 1px solid #c8c8c8;
+}
+.side_nav li {    
+    height: 40px;
+	border-top: 1px solid #c8c8c8;
+}
+.side_nav li a{
+	display: block;
+	text-decoration: none;
+	font: 14px OpenSansReg;
+	color: #656363;
+	width: 100%;
+	padding: 10px 5px 10px 20px;
+}
+.side_nav li:first-child{
+	border:none;
+}
+.side_nav li:hover{
+	background-color: #f9f9f9;
+	padding-left: 15px;
+}
+.side_nav li:hover a{
+		color: #2c2c2c;
+}
+
+/********************Main Content*******************************/
+
+.content {
+	position: relative;
+	margin-left: 300px;
+}
+.content > img {
+	border: 1px solid #c8c8c8;
+	width: 100%;
+}
+.content > p {
+	margin-top: 20px;
+	padding: 0 20px;
+	font-family: OpenSansReg;
+	font-size: 14px;
+	color: #2c2c2c;
+	text-align: justify;
+}
+
+/********************Footer*******************************/
+
+.bottom_nav{
+    position: relative;
+    background-color: #e1e1e1;
+    height: 40px;
+    margin: 50px auto;
+}
+
+.bottom_nav ul li {
+    padding:0;
+    margin:0;
+}
+.bottom_nav ul {    
+    position: relative;
+    height: 40px;
+    font: 15px OpenSansReg;
+}
+    
+.bottom_nav ul li a {
+    display: block;
+    color: #2c2c2c;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+.bottom_nav ul li :hover a {
+	border-bottom: 1px solid #2c2c2c;
+}
+
+.bottom_nav ul li {
+	line-height: normal;
+	letter-spacing:normal;
+	display: -moz-inline-stack;
+	display: inline-block;
+}
+span{
+	float: right;
+	color: #2c2c2c;
+	font: 15px OpenSansReg;
+	margin-top: -30px;
+	margin-right: 20px;
+}
+.empty{
+	clear:both;
+	margin-top:15px;
+}
+.empty p{
+	color:#FFF;
+}
